@@ -15,7 +15,7 @@ const modalStyle = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: 350,
     bgcolor: 'background.paper',
     border: '2px solid var(--color-purple-600)',
     borderRadius: '12px',
@@ -31,6 +31,7 @@ export default function Card({product}) {
             <Modal
             open={modalIsOpen}
             onClose={handleClose}
+            keepMounted={false}
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
             >
@@ -57,8 +58,9 @@ export default function Card({product}) {
                 <div className="cursor-pointer hover:text-cyan-600 transition-all duration-350" 
                 onClick={() => navigate(`/product/${product.product_id}`)}><FaEye /></div>
 
-                <div className="cursor-pointer hover:text-lime-600 transition-all duration-350"><MdEdit 
-                onClick={() => navigate(`/edit/${product.product_id}`)} /></div>
+                <div className="cursor-pointer hover:text-lime-600 transition-all duration-350">
+                    <MdEdit onClick={() => navigate(`/edit/${product.product_id}`)} />           
+                    </div>
                 
                 <div className="cursor-pointer hover:text-red-600 transition-all duration-350"
                 onClick={() => setModalIsOpen(true)}

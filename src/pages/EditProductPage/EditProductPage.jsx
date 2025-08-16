@@ -18,7 +18,7 @@ const modalStyle = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: 350,
     bgcolor: 'background.paper',
     border: '2px solid var(--color-purple-600)',
     borderRadius: '12px',
@@ -99,7 +99,7 @@ export default function EditProductPage() {
     return ( 
         <div className="flex"> 
             <DashboardSidebar active={null} />
-            <div className="p-40 ms-100 flex flex-col gap-10 w-6/7"> 
+            <div className="p-8 my-12 md:p-30 md:ms-100 flex flex-col gap-10 w-90 md:w-6/7"> 
             { 
                 loading ? 
                 <Loading /> 
@@ -204,7 +204,7 @@ export default function EditProductPage() {
                             className="border-2 border-purple-300 focus:outline-none focus:border-purple-500 p-3 rounded-xl"
                             onChange={(e) => setNewImage(e.target.files[0])}
                             />
-                            <div className="flex flex-wrap justify-evenly">
+                            <div className="flex flex-wrap justify-evenly mt-3 gap-4">
                                 { 
                                     product && product.images.length > 0 &&
                                     product.images.map((img, index) => ( 
@@ -212,7 +212,7 @@ export default function EditProductPage() {
                                         <MdDelete className="absolute h-9 w-9 rounded-full bg-red-600 text-gray-50 p-2 cursor-pointer hover:opacity-75"
                                         onClick={() => handleDelete(product.images[index])}
                                         />
-                                        <img src={img} alt="product-image" className="w-full h-full object-contain" />
+                                        <img src={img} alt="product-image" className="w-full h-full object-contain border-4 border-purple-400 rounded-4xl" />
                                     </div>
                                     ))
                                 }

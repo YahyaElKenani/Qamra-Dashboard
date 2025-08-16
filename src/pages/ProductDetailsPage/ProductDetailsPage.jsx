@@ -28,17 +28,17 @@ export default function ProductDetailsPage() {
     return ( 
         <div className="flex">
             <DashboardSidebar active={null} />
-            <div className="p-40 ms-100 flex flex-col gap-10 w-6/7">
+            <div className="p-8 my-12 md:p-30 md:ms-100 flex flex-col gap-10 md:w-6/7">
             { 
                 loading ? 
                 <Loading /> 
                 : 
                 <> 
-                    <h1 className="text-3xl font-bold flex gap-3"><PiSubtitlesFill/> Product Title: {product?.title}</h1>
-                    <div className="text-3xl flex gap-3"><IoIosPricetags/> Product Price: {product?.price} EGP</div>
-                    <div className="text-3xl flex gap-3"><FaRuler /> Product Length: {product?.length}</div>
-                    <div className="text-3xl flex gap-3"><FaRuler /> Product Width: {product?.width}</div>
-                    <div className="text-3xl flex gap-3"> <BsCheckCircleFill/> Product Availability: 
+                    <h1 className="text-xl md:text-3xl font-bold flex gap-3"><PiSubtitlesFill/> Product Title: {product?.title}</h1>
+                    <div className="text-xl md:text-3xl flex gap-3"><IoIosPricetags/> Product Price: {product?.price} EGP</div>
+                    <div className="text-xl md:text-3xl flex gap-3"><FaRuler /> Product Length: {product?.length}</div>
+                    <div className="text-xl md:text-3xl flex gap-3"><FaRuler /> Product Width: {product?.width}</div>
+                    <div className="text-xl md:text-3xl flex gap-3"> <BsCheckCircleFill/>Availability: 
                     {
                     product.is_available ? 
                     <div className="flex gap-3 items-center">
@@ -59,7 +59,7 @@ export default function ProductDetailsPage() {
                             Product Images: 
                         </div>
                     </div>
-                    <div className="flex flex-wrap w-full justify-evenly">
+                    <div className="flex flex-wrap w-full justify-evenly gap-3">
                     {product.images && 
                         product.images.map((img) => (<img src={img} alt="product-image" className="object-contain w-100 h-100 rounded-lg border-8 border-purple-300"/>))
                     }</div>

@@ -28,7 +28,7 @@ export default function CreateProductPage() {
     return ( 
         <div className="flex"> 
             <DashboardSidebar active={null}/>
-            <div className="p-40 ms-100 flex flex-col gap-10 w-6/7">
+            <div className="p-8 my-12 md:p-30 md:ms-100 flex flex-col gap-10 w-90 md:w-6/7">
                     <h1 className="text-3xl font-bold flex gap-3 items-center"><IoIosCreate/> Create Product</h1>
                     <form className="flex flex-col gap-5" onSubmit={handleSubmit}> 
 
