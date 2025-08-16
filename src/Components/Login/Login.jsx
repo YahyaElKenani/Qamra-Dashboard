@@ -47,8 +47,8 @@ export default function Login() {
                 pauseOnHover
                 theme="light"
             />
-            <form className="flex flex-col text-center gap-2 w-90" onSubmit={handleSubmit}>
-                <div className="text-4xl font-bold mb-2">Log in</div>
+            <form className="flex flex-col text-center gap-2 w-70 md:w-90" onSubmit={handleSubmit}>
+                <div className="text-2xl md:text-4xl font-bold mb-2">Log in</div>
                 <div className="flex items-center gap-4">
                     <MdEmail className="text-2xl"/>
                     <input type="email" placeholder="Enter Your Email" className="w-full border border-neutral-500 p-3 rounded-lg"
