@@ -75,7 +75,7 @@ export default function DashboardSidebar({active}) {
     );
 
     return ( 
-        <div className="md:min-h-full w-100 flex fixed">
+        <div className="navbar md:min-h-full w-100 flex fixed">
             <ToastContainer
                 position="top-center"
                 autoClose={5000}

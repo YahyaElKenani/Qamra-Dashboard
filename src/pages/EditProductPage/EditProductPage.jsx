@@ -209,10 +209,10 @@ export default function EditProductPage() {
                                     product && product.images.length > 0 &&
                                     product.images.map((img, index) => ( 
                                     <div key={product.product_id} className="remove-img w-50 h-50">
-                                        <MdDelete className="absolute h-9 w-9 rounded-full bg-red-600 text-gray-50 p-2 cursor-pointer hover:opacity-75"
+                                        <MdDelete className="absolute delete-img h-9 w-9 rounded-full bg-red-600 text-gray-50 p-2 cursor-pointer hover:opacity-75"
                                         onClick={() => handleDelete(product.images[index])}
                                         />
-                                        <img src={img} alt="product-image" className="w-full h-full object-contain border-4 border-purple-400 rounded-4xl" />
+                                        <img src={img} alt="product-image" className="w-full h-full object-contain border-4 preview-img border-purple-400 rounded-4xl" />
                                     </div>
                                     ))
                                 }
